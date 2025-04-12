@@ -8,8 +8,8 @@
 <body>
   <?php
   class Food{
-    public $name;
-    public $price;
+    private $name;
+    private $price;
     public function show_price(){
       echo $this->price;
     }
@@ -20,11 +20,11 @@
   }
 
   class Animal{
-    public $name;
-    public $weight;
-    public $height;
-    public function show_height(){
-      echo $this->height;
+    private $name;
+    private $weight;
+    private $height;
+    public function show_weight(){
+      echo $this->weight;
     }
     public function __construct($name, $weight, $height){
       $this->name = $name;
@@ -39,9 +39,9 @@
   echo "<br>";
   print_r($animal);
   echo "<br>";
-  echo $food->price;
+  $food->show_price();
   echo "<br>";
-  echo $animal->weight;
+  $animal->show_weight();
 
   ?>
 </body>
